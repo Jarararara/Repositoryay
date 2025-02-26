@@ -51,7 +51,7 @@ public class Bullet : MonoBehaviour
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
         {
-            forceDirection = (hit.point - attackPoint.position).normalized;
+            forceDirection = (hit.point - attackPoint.position).normalized; 
         }
 
         // add force

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class stick : MonoBehaviour
 {
+    public int damage;
+
     private Rigidbody rb;
 
     private bool targetHit;
@@ -19,6 +21,16 @@ public class stick : MonoBehaviour
             return;
         else 
             targetHit = true;
+
+        //checks if enemy is hit
+        if(collision.gameObject.GetComponent<BasicEnemy>() !=null)
+        {
+            BasicEnemy enemy = collision.gameObject.GetComponent<BasicEnemy>();
+
+            enemy.TakeDamage(damage);
+
+            Destroy(gameObject);
+        }
 
         rb.isKinematic = true;
 
