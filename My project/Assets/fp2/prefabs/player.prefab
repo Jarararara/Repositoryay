@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9016865180045545207}
   - component: {fileID: 6000703350908497683}
   - component: {fileID: 9083945901913756200}
+  - component: {fileID: 3215194238179033331}
   m_Layer: 0
   m_Name: playerObj
   m_TagString: Untagged
@@ -184,6 +185,18 @@ MonoBehaviour:
   throwKey: 323
   throwForce: 170
   throwUpwardForce: 0
+--- !u!114 &3215194238179033331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2181912300486132041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46ec935a9a40b44eaa2d3dc214d76c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2842858221844230839
 GameObject:
   m_ObjectHideFlags: 0

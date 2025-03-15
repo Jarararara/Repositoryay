@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/fp2/New Scene/Playground.unity
     guid: ca32a96e44971ae469d0f6a1b14e2ccb
   - enabled: 1
-    path: Assets/Better State Machines/Level/Level.unity
+    path: Assets/Better State Machines/scenes/Level.unity
     guid: dbd2e668468dcbc41ac1308021d6e8ba
+  - enabled: 1
+    path: Assets/Better State Machines/scenes/gameover.unity
+    guid: ea8f86e1d43805f4eb8142b846a4462d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

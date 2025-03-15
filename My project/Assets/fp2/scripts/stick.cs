@@ -7,8 +7,10 @@ public class stick : MonoBehaviour
     public int damage;
 
     private Rigidbody rb;
-
+    
     private bool targetHit;
+
+    private EnemyManager enemyManager;
 
     private void Start()
     {
@@ -33,7 +35,15 @@ public class stick : MonoBehaviour
         }
 
         rb.isKinematic = true;
-
+        
         transform.SetParent(collision.transform);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("sus"))
+        {
+            Destroy(other.gameObject);
+            enemyManager.DeregisterEnemy();
+        }
     }
 }

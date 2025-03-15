@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI; //important
 
@@ -11,6 +12,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
 
     public Transform centrePoint; //centre of the area the agent wants to move around in
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
+    private EnemyManager enemyManager;
 
     void Start()
     {
@@ -29,8 +31,8 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
                 agent.SetDestination(point);
             }
         }
-
     }
+
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
 
@@ -46,5 +48,12 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
 
         result = Vector3.zero;
         return false;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
